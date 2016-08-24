@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="Points"
+            android:textColor="@color/backgroundYellow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="Target"
+            android:textColor="@color/backgroundYellow" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="20" />
+
+        <TextView
+            android:id="@+id/tv20DefendWinMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="Score 36 or more runs in 7.2 or less overs" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="18" />
+
+        <TextView
+            android:id="@+id/tv18DefendWinMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="Score 36 or more runs in 7.2 or less overs" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="17" />
+
+        <TextView
+            android:id="@+id/tv17DefendWinMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3sp"
+            android:text="Score 36 or more runs in 7.2 or less overs" />
+    </TableRow>
+</TableLayout>

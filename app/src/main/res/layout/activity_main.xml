@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundYellow"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvTargetCalculator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/target_calculator"
+                android:textColor="@color/colorPrimary"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvOversText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/over"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etOversField"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="20" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overs_text"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvScoreText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_innings_score"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etFirstInningScore"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llTeamChasing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:text="Team Chasing"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="When Winning"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <include
+                android:id="@+id/iChasingWinning"
+                layout="@layout/table_view_winning"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="When Losing"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <include
+                android:id="@+id/iChasingWinning"
+                layout="@layout/table_view_losing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTeamDefending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:text="Team Defending"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="When Winning"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <include
+                android:id="@+id/iChasingWinning"
+                layout="@layout/table_view_winning_defending"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="When Losing"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <include
+                android:id="@+id/iChasingWinning"
+                layout="@layout/table_view_losing_defending"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+

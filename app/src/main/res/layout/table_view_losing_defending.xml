@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points"
+            android:textColor="@color/backgroundYellow"
+            android:gravity="center"
+            android:padding="3sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target"
+            android:textColor="@color/backgroundYellow"
+            android:gravity="center"
+            android:padding="3sp" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:gravity="center"
+            android:padding="3sp" />
+        <TextView
+            android:id="@+id/tv20DefendLoseMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have the opposition bat 17 or more overs"
+            android:gravity="center"
+            android:padding="3sp" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:gravity="center"
+            android:padding="3sp" />
+        <TextView
+            android:id="@+id/tv18DefendLoseMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have the opposition bat 17 or more overs"
+            android:gravity="center"
+            android:padding="3sp" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:gravity="center"
+            android:padding="3sp" />
+        <TextView
+            android:id="@+id/tv17DefendLoseMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have the opposition bat 17 or more overs"
+            android:gravity="center"
+            android:padding="3sp" />
+    </TableRow>
+</TableLayout>
