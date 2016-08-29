@@ -2,7 +2,8 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:stretchColumns="1">
+    android:stretchColumns="1"
+    android:background="@drawable/background_winning">
 
     <TableRow android:background="@color/colorPrimaryDark">
 
@@ -41,6 +42,8 @@
             android:text="Score 36 or more runs in 7.2 or less overs" />
     </TableRow>
 
+    <View style="@style/Divider"/>
+
     <TableRow>
 
         <TextView
@@ -58,6 +61,8 @@
             android:padding="3sp"
             android:text="Score 36 or more runs in 7.2 or less overs" />
     </TableRow>
+
+    <View style="@style/Divider"/>
 
     <TableRow>
 

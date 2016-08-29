@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:stretchColumns="1">
+    android:stretchColumns="1"
+    android:background="@drawable/background_losing">
 
     <TableRow
         android:background="@color/colorPrimaryDark">
@@ -39,6 +40,8 @@
             android:padding="3sp" />
     </TableRow>
 
+    <View style="@style/Divider"/>
+
     <TableRow>
         <TextView
             android:layout_width="wrap_content"
@@ -54,6 +57,8 @@
             android:gravity="center"
             android:padding="3sp" />
     </TableRow>
+
+    <View style="@style/Divider"/>
 
     <TableRow>
         <TextView

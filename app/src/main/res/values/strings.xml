@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TCA Target Calculator</string>
+    <string name="app_name">TCA-Target Calculator</string>
     <string name="target_calculator">Target Calculator</string>
     <string name="over">Overs:</string>
     <string name="enter_overs">Enter Overs</string>

@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     //Function to display equation while Chasing
     private void setChasingEquationData(int targetScore, double team1nrr, int overs) {
 
@@ -96,9 +95,20 @@ public class MainActivity extends AppCompatActivity {
         int chLoss2 = (int) Math.ceil(overs * (team1nrr - 0.5));
         int chLoss1 = (int) Math.ceil(overs * (team1nrr - 0.75));
 
-        lose20Chase.setText(Html.fromHtml("Score " + "<b><font color=\"#ff0000\">" + (chLoss4) + "</font></b>" + " or more  runs "));
-        lose18Chase.setText(Html.fromHtml("Score " + "<b><font color=\"#ff0000\">" + (chLoss2) + "-" + (chLoss4 - 1) + "</font></b>" + " runs "));
-        lose17Chase.setText(Html.fromHtml("Score " + "<b><font color=\"#ff0000\">" + (chLoss1) + "-" + (chLoss2 - 1) + "</font></b>" + " runs "));
+        if (chLoss4 > 0)
+            lose20Chase.setText(Html.fromHtml("Score " + "<b><font color=\"#ff0000\">" + (chLoss4) + "</font></b>" + " or more  runs "));
+        else
+            lose20Chase.setText("You have already got 4 bonus points");
+
+        if (chLoss2 > 0)
+            lose18Chase.setText(Html.fromHtml("Score " + "<b><font color=\"#ff0000\">" + (chLoss2) + "-" + (chLoss4 - 1) + "</font></b>" + " runs "));
+        else
+            lose18Chase.setText("You have already got 2 bonus points");
+
+        if (chLoss1 > 0)
+            lose17Chase.setText(Html.fromHtml("Score " + "<b><font color=\"#ff0000\">" + (chLoss1) + "-" + (chLoss2 - 1) + "</font></b>" + " runs "));
+        else
+            lose17Chase.setText("You have already got 1 bonus point");
     }
 
 
@@ -135,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private String getProperOvers(double v, boolean isChasing) {
-        Log.v("NRR", " target over -> " + v + " isChasing "+isChasing);
+        Log.v("NRR", " target over -> " + v + " isChasing " + isChasing);
         int fullOvers = (int) v;
 
         Log.v("NRR", " fullOvers -> " + fullOvers);
@@ -144,15 +154,26 @@ public class MainActivity extends AppCompatActivity {
         remainingBalls = remainingBalls / (DECIMAL_TO_BALLS);
         Log.v("NRR", " remainingBalls 2 -> " + remainingBalls);
 
-        if(isChasing) {
+        if (isChasing) {
             remainingBalls = Math.floor(remainingBalls * 10);
-        }else{
+        } else {
             remainingBalls = Math.ceil(remainingBalls * 10);
         }
         Log.v("NRR", " remainingBalls 3 -> " + remainingBalls);
 
         int remBalls = (int) remainingBalls;
-        String res = fullOvers + "." + remBalls;
+
+        String res;
+
+        if (remBalls == 6) {
+            fullOvers = fullOvers + 1;
+            res = "" + fullOvers;
+        } else if (remBalls == 0) {
+            res = "" + fullOvers;
+        } else {
+            res = fullOvers + "." + remBalls;
+        }
+
         Log.v("NRR", " res -> " + res);
         return res;
     }

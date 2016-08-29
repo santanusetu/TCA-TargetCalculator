@@ -7,4 +7,5 @@
 
 
     <color name="backgroundYellow">#efeedc</color>
+    <color name="tableBackground">#c0c0c0</color>
 </resources>
